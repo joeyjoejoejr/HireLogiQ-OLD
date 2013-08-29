@@ -1,0 +1,16 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: hirelogiq_development
+  pool: 5
+  username: joe
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: hirelogiq_test
+  pool: 5
+  username: joe
+  password:
+

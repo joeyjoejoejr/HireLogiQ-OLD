@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "karma": "~0.10",
+    "karma-qunit": "*",
+    "karma-ember-preprocessor": "*",
+    "karma-coffee-preprocessor": "*"
+  }
+}
