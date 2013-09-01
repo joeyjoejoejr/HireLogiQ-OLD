@@ -7,6 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Candidate.create([
-  { name: "Jose Valim" },
-  { name: "Clark Kent" }
+  { name: "Jose Valim", email: "JoVa@Lim.com"},
+  { name: "Clark Kent", email: "CK@Metropolis.gov" }
 ])

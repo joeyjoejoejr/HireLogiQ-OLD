@@ -1,0 +1,20 @@
+<section id="add-candidates">
+  <form>
+    {{view Ember.TextField valueBinding="newCandidateName" class="add-candidate"
+      placeholder="Name"}}
+    {{view Ember.TextField valueBinding="newCandidateEmail"
+      class="candidate-email" placeholder="Email"}}
+    {{view Hirelogiq.CandidateGitHub valueBinding="newCandidateGitHub"
+      class="candidate-github" placeholder="Github Username"}}
+    <ul>
+      {{#each result in results}}
+      <li class="github-user" {{action 'updateGitHubName' result}}>
+        <img class="candidate-avatar" {{bindAttr src="result.avatar_url"}}>{{result.login}}
+      </li>
+      {{/each}}
+    </ul>
+    <input type="submit" value="Add Candidate" class="submit btn"
+      {{action addCandidate}}>
+  </form>
+</section>
+

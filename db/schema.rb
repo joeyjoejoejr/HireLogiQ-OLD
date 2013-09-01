@@ -17,8 +17,10 @@ ActiveRecord::Schema.define(version: 20130825173830) do
   enable_extension "plpgsql"
 
   create_table "candidates", force: true do |t|
-    t.string   "name"
-    t.string   "email"
+    t.string   "name",                                                   null: false
+    t.string   "email",                                                  null: false
+    t.string   "github_name"
+    t.string   "avatar_url",  default: "http://www.gravatar.com/avatar", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

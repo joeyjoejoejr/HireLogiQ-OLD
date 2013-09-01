@@ -1,15 +1,10 @@
-<section id="add-candidates">
-  <form>
-    {{view Ember.TextField valueBinding="newCandidateName" class="add-candidate"}}
-    <input type="submit" value="Add Candidate" class="submit btn"
-      {{action addCandidate}}>
-  </form>
-</section>
+{{partial "add-candidate"}}
 
 <section id="candidates">
-  {{#each controller}}
-    <article class="candidate">
-      <p class="candidate-name">{{name}}</p>
+  {{#each candidate in controller}}
+  <article class="candidate" {{action "showCandidate" candidate}}>
+      <img {{bindAttr src='candidate.avatar_url'}}>
+      <p class="candidate-name">{{candidate.name}}</p>
     </article>
   {{/each}}
 </section>
